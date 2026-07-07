@@ -40,6 +40,11 @@ async def global_exception_handler(request: Request, exc: Exception):
 
 app.include_router(v1_router, prefix="/api/v1")
 
+# Initialize database tables
+from app.models.database import Base
+from app.api.dependencies.database import engine
+Base.metadata.create_all(bind=engine)
+
 # Mount local uploads directory
 from fastapi.staticfiles import StaticFiles
 import os

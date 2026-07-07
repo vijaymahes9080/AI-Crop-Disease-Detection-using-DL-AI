@@ -28,7 +28,7 @@ export async function fetchWithRetry(requestFn, retries = 3, delay = 1000) {
       const jitter = Math.random() * 1000;
       const nextDelay = (delay * 2) + jitter;
       
-      print(f"[*] Connection failed. Retrying in {nextDelay.toFixed(0)}ms... ({retries} attempts left)");
+      console.warn(`[*] Connection failed. Retrying in ${nextDelay.toFixed(0)}ms... (${retries} attempts left)`);
       await new Promise(resolve => setTimeout(resolve, nextDelay));
       return fetchWithRetry(requestFn, retries - 1, nextDelay);
     }
