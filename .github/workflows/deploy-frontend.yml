@@ -1,0 +1,43 @@
+name: Deploy React Frontend to GitHub Pages
+
+on:
+  push:
+    branches:
+      - '**'
+      - '!gh-pages'
+    paths:
+      - 'agrovision-frontend/**'
+      - '.github/workflows/deploy-frontend.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  deploy:
+    concurrency: ci-${{ github.ref }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: 'npm'
+          cache-dependency-path: agrovision-frontend/package-lock.json
+
+      - name: Install Dependencies
+        run: npm ci
+        working-directory: agrovision-frontend
+
+      - name: Build Application
+        run: npm run build
+        working-directory: agrovision-frontend
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./agrovision-frontend/dist
