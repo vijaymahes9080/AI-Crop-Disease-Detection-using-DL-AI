@@ -1,0 +1,22 @@
+stages:
+  clean:
+    cmd: python src/clean.py --raw_dir data/raw --target_dir data/intermediate
+    deps:
+      - data/raw
+      - src/clean.py
+    outs:
+      - data/intermediate
+
+  split:
+    cmd: python src/split.py --src_dir data/intermediate --dest_dir data/processed
+    deps:
+      - data/intermediate
+      - src/split.py
+    outs:
+      - data/processed
+
+  preprocess:
+    cmd: python src/preprocess.py --input_dir data/processed --img_size 224
+    deps:
+      - data/processed
+      - src/preprocess.py

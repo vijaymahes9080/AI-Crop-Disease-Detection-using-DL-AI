@@ -1,0 +1,62 @@
+{
+  "diseases": [
+    {
+      "id": 1,
+      "name": "Potato Late Blight (Phytophthora infestans)",
+      "cause": "Water-mold pathogen spreading rapidly under cool, wet conditions (high humidity, temperature 15-20°C).",
+      "prevention": [
+        "Use certified disease-free seed tubers.",
+        "Ensure wide crop spacing to promote leaf drying.",
+        "Avoid overhead irrigation; use drip irrigation systems."
+      ],
+      "risk_level": "CRITICAL",
+      "treatments": {
+        "organic": {
+          "title": "Copper compounds & bio-fungicides",
+          "steps": [
+            "Apply liquid copper fungicide sprays thoroughly on leaves.",
+            "Use Bacillus subtilis strain QST 713 bio-controls on early foliage."
+          ],
+          "dosage": "Dilute 2.5 oz copper solution per gallon of water. Spray every 7-10 days."
+        },
+        "chemical": {
+          "title": "Fungicide mixtures (Mancozeb or Chlorothalonil)",
+          "steps": [
+            "Apply Chlorothalonil 720 SFT sprays at early vine growth.",
+            "Rotate with metalaxyl-containing mixtures to prevent resistance."
+          ],
+          "dosage": "1.5 lb Chlorothalonil per acre. Observe pre-harvest interval of 5 days."
+        }
+      }
+    },
+    {
+      "id": 2,
+      "name": "Coffee Leaf Rust (Hemileia vastatrix)",
+      "cause": "Fungal spores landing on leaves, requiring free water on the leaf surface for over 24 hours to germinate.",
+      "prevention": [
+        "Prune shade trees to increase direct sunlight exposure.",
+        "Remove and burn fallen infected coffee leaves.",
+        "Plant rust-resistant cultivars (e.g., Castillo, Catimor)."
+      ],
+      "risk_level": "WARNING",
+      "treatments": {
+        "organic": {
+          "title": "Mineral oils & copper sulfate mixtures",
+          "steps": [
+            "Spray copper hydroxide mixtures on the underside of leaves.",
+            "Apply neem oil extracts dynamically to restrict spore germination."
+          ],
+          "dosage": "1% Copper Hydroxide mix. Apply at onset of rainy season."
+        },
+        "chemical": {
+          "title": "Triazole systemic fungicides",
+          "steps": [
+            "Apply Cyproconazole or Triadimefon directly to foliar structures.",
+            "Spray only when rust severity indexes cross 5%."
+          ],
+          "dosage": "0.5 Liters Cyproconazole per hectare. Max 2 applications per year."
+        }
+      }
+    }
+  ]
+}

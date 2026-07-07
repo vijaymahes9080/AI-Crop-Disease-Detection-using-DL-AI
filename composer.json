@@ -1,0 +1,11 @@
+{
+    "name": "vijaymahes/ai-crop-disease-detection",
+    "description": "AI Crop Disease Detection using DL & AI",
+    "authors": [
+        {
+            "name": "Vijay Mahes",
+            "email": "Vijaypradhap2004@gmail.com"
+        }
+    ],
+    "require": {}
+}
