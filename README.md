@@ -5,6 +5,8 @@
 [![Vite Version](https://img.shields.io/badge/vite-5.0-purple.svg)](https://vitejs.dev/)
 [![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
 
+![AgroVision AI Hero Banner](docs/images/hero_banner.png)
+
 AgroVision AI is a production-ready, edge-optimized crop disease detection platform that empowers smallholder farmers and extension officers with real-time deep learning diagnostics. Utilizing a hybrid cloud/edge computing architecture, the application provides classification, severity estimation, and localized treatment recommendations both online and offline.
 
 This codebase is configured to run fully on a local Python Virtual Environment and Vite dev server, avoiding Docker overhead for simpler deployment and testing.
@@ -97,6 +99,14 @@ AI Crop Disease Detection using DL & AI/
     ├── inference/                           # Custom TorchServe handlers
     └── scripts/                             # ONNX compile & INT8 TFLite conversion scripts
 ```
+
+---
+
+## 🖥️ Screen Previews
+
+| 📱 Mobile AI Scanner | 💻 Web Analytics Dashboard |
+| :---: | :---: |
+| ![Mobile Scanner](docs/images/mobile_scanner.png) | ![Web Dashboard](docs/images/web_dashboard.png) |
 
 ---
 
